@@ -1,0 +1,23 @@
+<!--用户头像-->
+<view class="userinfo-avatar" bindtap="bindViewTap">
+  <open-data type="userAvatarUrl"></open-data>
+</view>
+
+
+<!-- 床 -->
+<image class="div-0" src="http://150.158.91.141:8080/images/bed.png"></image>
+<!-- 身体在最底层 -->
+<image class="div-a" src="http://150.158.91.141:8080/images/body.jpg"></image>
+<!-- 表情 -->
+<image class="div-b" src="{{f}}"></image>  
+<!-- 上衣 -->
+<image class="div-b" src="{{shirt}}"></image>
+<!-- 裤子 -->
+<image class="div-b" src="{{trous}}"></image>
+<!-- 鞋 -->
+<image class="div-b" src="{{shoe}}"></image>   
+<!-- 发型 -->
+<image class="div-b" src="{{h}}"></image>  
+
+<!-- 音响和鞋 -->
+<image class="div-c" src="http://150.158.91.141:8080/images/video-off.png"></image>

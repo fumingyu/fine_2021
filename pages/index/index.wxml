@@ -1,0 +1,115 @@
+<!-- 选择形象 -->
+<view class="header" > 选一个你喜欢的形象吧</view>
+<!-- 弹窗 -->
+<view class="menu">
+  <view class="part">
+      <button class="tan" bindtap="sub_hair">发型</button>
+  </view>
+  <view class="part">
+      <button class="tan" bindtap="sub_face">情绪</button>
+  </view>
+  <view class="part">
+      <button class="tan" bindtap="sub_shirt">上衣</button>
+  </view>
+  <view class="part">
+      <button class="tan" bindtap="sub_tours">裤子</button>
+  </view>
+  <view class="part">
+      <button class="tan" bindtap="sub_shoes">鞋</button>
+  </view>
+</view>
+
+<!-- 身体在最底层 -->
+<image class="div-a" src="http://150.158.91.141:8080/images/body.jpg"></image>
+<!-- 表情 -->
+<image class="div-b" src="{{f}}"></image>  
+<!-- 上衣 -->
+<image class="div-b" src="{{shirt}}"></image>
+<!-- 裤子 -->
+<image class="div-b" src="{{trous}}"></image>
+<!-- 鞋 -->
+<image class="div-b" src="{{shoe}}"></image>   
+<!-- 发型 -->
+<image class="div-b" src="{{h}}"></image>  
+
+<!-- 发型选择 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal0}}"></view>
+<view class="modalDlg" wx:if="{{showModal0}}">
+  <view>左右滑动切换</view><view>点击图片选择</view>
+  <scroll-view  class="scroll-view" scroll-x="true" style=" white-space: nowrap;" scroll-into-view="t1" >
+    <view class="t_shirt" >
+      <image id="hair{{index}}" wx:for="{{hair}}" src="{{item}}" bindtap="go0"></image>
+    </view>
+  </scroll-view>
+  <button class="bt" bindtap="exit">取消</button>
+</view>
+<!-- 表情选择 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+<view class="modalDlg" wx:if="{{showModal1}}">
+  <view>左右滑动切换</view><view>点击图片选择</view>
+  <scroll-view  class="scroll-view" scroll-x="true" style=" white-space: nowrap;" scroll-into-view="t1" >
+    <view class="t_shirt" >
+      <image id="face{{index}}" wx:for="{{face}}" src="{{item}}" bindtap="go1"></image>
+    </view>
+  </scroll-view>
+  <button class="bt" bindtap="exit">取消</button>
+</view>
+<!-- 上衣选择 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal2}}"></view>
+<view class="modalDlg" wx:if="{{showModal2}}">
+  <view>左右滑动切换</view><view>点击图片选择</view>
+  <scroll-view  class="scroll-view" scroll-x="true" style=" white-space: nowrap;" scroll-into-view="t1" >
+  <view class="t_shirt" >
+      <image id="clothes{{index}}" wx:for="{{clothes}}" src="{{item}}" bindtap="go2" ></image>
+  </view>
+  </scroll-view>
+  <button class="bt" bindtap="exit">取消</button>
+</view>
+<!-- 裤子选择 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal3}}"></view>
+<view class="modalDlg" wx:if="{{showModal3}}">
+  <view>左右滑动切换</view><view>点击图片选择</view>
+  <scroll-view  class="scroll-view" scroll-x="true" style=" white-space: nowrap;" scroll-into-view="t1" >
+  <view class="t_shirt" >
+      <image id="trouser{{index}}" wx:for="{{trouser}}" src="{{item}}" bindtap="go3"></image>
+  </view>
+  </scroll-view>
+  <button class="bt" bindtap="exit">取消</button>
+</view>
+<!-- 鞋选择 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal4}}"></view>
+<view class="modalDlg" wx:if="{{showModal4}}">
+  <view>左右滑动切换</view><view>点击图片选择</view>
+  <scroll-view  class="scroll-view" scroll-x="true" style=" white-space: nowrap;" scroll-into-view="t1" >
+  <view class="t_shirt" >
+      <image id="shoes{{index}}" wx:for="{{shoes}}" src="{{item}}" bindtap="go4"></image>
+  </view>
+  </scroll-view>
+  <button class="bt" bindtap="exit">取消</button>
+</view>
+
+
+<!-- 确认按钮 -->
+<button class="butn" bindtap="gogo">
+    确认
+</button>
+
+<!-- 选择心情 -->
+<view class="moods" >你现在的心情是？</view>
+<view class="responsive">
+  <view class="img">
+      <image src="http://150.158.91.141:8080/images/face0.png"></image>
+      <text>担心</text>
+  </view>
+  <view class="img">
+      <image src="http://150.158.91.141:8080/images/face1.png"></image>
+      <text>忧伤</text>
+  </view>
+  <view class="img">
+      <image src="http://150.158.91.141:8080/images/face2.png"></image>
+      <text>愤怒</text>
+  </view>
+</view>
+
+
+

@@ -1,0 +1,20 @@
+/* pages/home/home.wxss */
+
+/* 用户头像 */
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin-top: 30rpx;
+  margin-left: 600rpx;
+  border-radius: 50%;
+}
+/* 床 */
+
+.div-0{ position:absolute;  left: 130rpx; top:80rpx; width:500rpx; height:500rpx} 
+/* 穿着 */
+.div-a{ position:absolute;  left: -20rpx; top:550rpx; width:500rpx; height:500rpx} 
+.div-b{ position:absolute;  left: -20rpx; top:550rpx;  width:500rpx; height:500rpx} 
+
+/* 音响和鞋 */
+.div-c{ position:absolute;  left: 10px; top:700rpx;  width:500rpx; height:500rpx} 
